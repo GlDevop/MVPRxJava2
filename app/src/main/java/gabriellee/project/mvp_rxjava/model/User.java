@@ -12,7 +12,7 @@ import gabriellee.project.mvp_rxjava.database.DBConstant;
 public class User {
 
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = DBConstant.USER_FIRST_NAME)
+    @ColumnInfo(name = DBConstant.USER_ID)
     private int id;
 
     @SerializedName("first_name")
@@ -20,6 +20,7 @@ public class User {
     private String firstname;
 
     @SerializedName("last_name")
+    @ColumnInfo(name = DBConstant.USER_LAST_NAME)
     private String lastName;
 
     public User() {
